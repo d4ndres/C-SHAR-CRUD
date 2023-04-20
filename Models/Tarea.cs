@@ -6,14 +6,14 @@ namespace _02_learn_entity_framework_core.Models;
 
 public class Tarea
 {
-    [Key]
+    //[Key]
     public Guid TareaId { get; set; }
 
-    [ForeignKey("CategoriaId")]
+    //[ForeignKey("CategoriaId")]
     public Guid CategoriaId { get; set; }
 
-    [Required]
-    [MaxLength(100)]
+    //[Required]
+    //[MaxLength(100)]
     public string Titulo {get;set;}
 
     public string Description {get;set;}
@@ -27,7 +27,7 @@ public class Tarea
     public virtual Categoria Categoria { get; set; }
 
     // Esta propiedad no se crea en la db. Por su DataNotation
-    [NotMapped]
+    //[NotMapped]
     public string Resumen { get;set;}
     
 }
