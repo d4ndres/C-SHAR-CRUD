@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace _02_learn_entity_framework_core.Models;
 
@@ -15,6 +16,8 @@ public class Categoria
 
     public int Peso { get; set; }
 
+
+    [JsonIgnore]
     // Me permite traer todas las tareas que poseen esta categoria
     public virtual ICollection<Tarea> Tareas { get; set; }
 }
